@@ -299,7 +299,8 @@ function setupDb() {
 }
 
 let port = 2000;
-app.listen(port, function () {
+let dev = true;
+app.listen(process.env.PORT || 8080, function () {
     setupDb();
 
     console.log("Server is listening at localhost:" + port);
