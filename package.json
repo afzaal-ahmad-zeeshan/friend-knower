@@ -1,8 +1,8 @@
 {
-  "name": "nodejs-web-app1",
+  "name": "friend-knower",
   "version": "0.0.0",
-  "description": "NodejsWebApp1",
-  "main": "server.js",
+  "description": "Friend-knower app is a questionnaire sample built with Node.js and SQLite.",
+  "main": "app.js",
   "author": {
     "name": "Foobar"
   },
@@ -17,5 +17,8 @@
   },
   "engines": {
     "node": "8.7.0"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
