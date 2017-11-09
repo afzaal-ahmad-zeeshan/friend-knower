@@ -280,6 +280,10 @@ app.get("/", function (req, res) {
 });
 
 app.get("*", function (req, res) {
+    res.redirect("lost");
+});
+
+app.get("/lost", function (req, res) {
     res.render("lost");
 });
 

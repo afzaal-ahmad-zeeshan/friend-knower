@@ -12,7 +12,7 @@ block content
             div#userdetails
                 div.form-group
                     label.control-label Your Name:
-                    input(type="text", name="username", id="username", required).form-control.input-lg
+                    input(type="text", name="username", placeholder="John Doe" id="username", required).form-control.input-lg
                     p Fill in the questions below and submit the form to get the shareable link.
 
             - for (var question = 1; question <= questions; question++) {
@@ -20,7 +20,7 @@ block content
              div.span#questions
                 h4.bold= "Question #" + question
                 - var name = "question" + question
-                input(type="text", name=name, value="Question " + question, required).form-control.input-lg
+                input(type="text", name=name, placeholder="Question " + question, required).form-control.input-lg
                 br 
 
                 - var options = 4
@@ -29,16 +29,10 @@ block content
                      - var optionName = name + "option" + option
                      - var selectedOption = "question" + question + "selected"
 
-                     if option == randomOption
-                         div.radio
-                            label#q1op1label.radio-inline.control-label
-                                 input(type="radio", name=selectedOption, value=option, required, checked)
-                                 input(type="text", name=optionName, value="Question " + question + " option " + option, id=optionName, required).form-control.expandinginput
-                     else
-                         div.radio
-                            label#q1op1label.radio-inline.control-label
-                                 input(type="radio", name=selectedOption, value=option, required)
-                                 input(type="text", name=optionName, value="Question " + question + " option " + option, id=optionName, required).form-control.expandinginput
+                      div.radio
+                          label#q1op1label.radio-inline.control-label
+                              input(type="radio", name=selectedOption, value=option, required)
+                              input(type="text", name=optionName, placeholder="Question " + question + " option " + option, id=optionName, required).form-control.expandinginput
                 - }
             - }
 
@@ -49,4 +43,6 @@ block content
          em By submitting you confirm that you have read and agree to 
             a(href="/policy") the terms and policies of privacy
             span.
+                . Do not share passwords, credit card information or other sensitive information through these forms.
                 .
+
